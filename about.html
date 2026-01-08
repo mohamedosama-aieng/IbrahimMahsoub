@@ -100,15 +100,7 @@
                         </div>
                     </div>
 
-                    <!-- Barber 4 -->
-                    <div class="profile-card">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 4%3C/text%3E%3C/svg%3E"
-                            alt="Barber 4">
-                        <div class="profile-card__body">
-                            <div class="profile-card__title">Barber 4</div>
-                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
-                        </div>
-                    </div>
+
 
                     <!-- Cashier -->
                     <div class="profile-card">
@@ -139,13 +131,18 @@
                 </p>
 
                 <!-- Suggested photo size for place photos: 1200x800 (3:2 or 16:9 ok) -->
-                <div class="place-photos-grid" style="margin-top: 18px;">
-                    <div class="photo-slot">Place Photo (1200×800)</div>
-                    <div class="photo-slot">Place Photo (1200×800)</div>
-                    <div class="photo-slot">Place Photo (1200×800)</div>
-                    <div class="photo-slot">Place Photo (1200×800)</div>
-                    <div class="photo-slot">Place Photo (1200×800)</div>
-                    <div class="photo-slot">Place Photo (1200×800)</div>
+                <div class="place-carousel-wrapper" style="margin-top: 18px;">
+                    <button class="carousel-arrow carousel-arrow--prev" aria-label="Previous" type="button">‹</button>
+                    <div class="place-carousel" id="placeCarousel">
+                        <div class="place-card" data-position="-2">Place Photo (1200×800)</div>
+                        <div class="place-card" data-position="-1">Place Photo (1200×800)</div>
+                        <div class="place-card" data-position="0">Place Photo (1200×800)</div>
+                        <div class="place-card" data-position="1">Place Photo (1200×800)</div>
+                        <div class="place-card" data-position="2">Place Photo (1200×800)</div>
+                        <div class="place-card" data-position="hidden">Place Photo (1200×800)</div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow--next" aria-label="Next" type="button">›</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
                 </div>
             </section>
         </div>
@@ -189,6 +186,85 @@
     <!-- Add i18n AFTER app.js -->
     <script src="js/app.js"></script>
     <script src="js/i18n.js"></script>
+    <script>
+        // 3D Coverflow Carousel
+        (function () {
+            const carousel = document.getElementById('placeCarousel');
+            const dotsContainer = document.getElementById('carouselDots');
+            if (!carousel) return;
+
+            const cards = Array.from(carousel.querySelectorAll('.place-card'));
+            const totalCards = cards.length;
+            let currentIndex = 2; // Start with 3rd card (index 2) as center
+
+            // Create dots
+            cards.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function updatePositions() {
+                cards.forEach((card, i) => {
+                    const offset = i - currentIndex;
+                    if (offset < -2 || offset > 2) {
+                        card.setAttribute('data-position', 'hidden');
+                    } else {
+                        card.setAttribute('data-position', offset.toString());
+                    }
+                });
+
+                // Update dots
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = Math.max(0, Math.min(totalCards - 1, index));
+                updatePositions();
+            }
+
+            function next() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prev() {
+                goToSlide(currentIndex - 1);
+            }
+
+            // Arrow controls
+            const wrapper = carousel.closest('.place-carousel-wrapper');
+            const prevBtn = wrapper?.querySelector('.carousel-arrow--prev');
+            const nextBtn = wrapper?.querySelector('.carousel-arrow--next');
+
+            if (prevBtn) prevBtn.addEventListener('click', prev);
+            if (nextBtn) nextBtn.addEventListener('click', next);
+
+            // Click on side cards to navigate
+            cards.forEach((card, i) => {
+                card.addEventListener('click', () => {
+                    if (i !== currentIndex) goToSlide(i);
+                });
+            });
+
+            // Keyboard navigation
+            carousel.setAttribute('tabindex', '0');
+            carousel.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    document.dir === 'rtl' ? next() : prev();
+                } else if (e.key === 'ArrowRight') {
+                    document.dir === 'rtl' ? prev() : next();
+                }
+            });
+
+            // Initialize
+            updatePositions();
+        })();
+    </script>
 </body>
 
 </html>

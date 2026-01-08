@@ -235,26 +235,28 @@
             const container = document.getElementById('servicesShowcase');
 
             container.innerHTML = services.map(service => `
-                    <div class="service-showcase-item">
-                        <div class="service-icon">
-                            ${service.icon || '✂️'}
-                        </div>
-                        <div class="service-info">
+                    <div class="service-card-pro">
+                        <div class="service-card-content">
+                            <div class="service-icon-box">
+                                ${service.icon || '✂️'}
+                            </div>
                             <h3 class="service-title">${window.t('service.' + service.id + '.name')}</h3>
                             <p class="service-desc">${window.t('service.' + service.id + '.desc')}</p>
-                            <div class="service-meta">
-                                <span class="service-time">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    ${window.t('service.time')}
-                                </span>
+                        </div>
+                        <div class="service-meta-row">
+                            <div class="service-duration-chip">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                ${window.t('service.time')}
+                            </div>
+                            <div class="service-price-box">
+                                ${service.price} <small>${window.t('currency')}</small>
                             </div>
                         </div>
-                        <div class="service-action">
-                            <div class="service-price">${service.price} ${window.t('currency')}</div>
-                            <a href="booking.html" class="btn-sm">${window.t('service.book')}</a>
+                        <div class="service-action-row">
+                            <a href="booking.html" class="btn-service-book">${window.t('service.book')}</a>
                         </div>
                     </div>
                 `).join('');

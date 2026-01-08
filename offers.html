@@ -197,18 +197,27 @@
                                <span class="old">${offer.oldPrice} ${window.t('currency')}</span>
                                <span class="new">${offer.newPrice} ${window.t('currency')}</span>
                            </div>`
-                    : (offer.oldPrice
+                    : (typeof offer.oldPrice === 'number' || (offer.oldPrice && offer.oldPrice !== 'null')
                         ? `<div class="offer-price"><span class="new">${offer.oldPrice} ${window.t('currency')}</span></div>`
-                        : `<div class="offer-price"></div>`); // Handle case with no specific price shown
+                        : `<div class="offer-price"></div>`);
+
+                // Fallback for title/desc if translation fails or returns key
+                const tTitle = window.t('offer.' + offer.id + '.title');
+                const title = (tTitle && !tTitle.startsWith('offer.')) ? tTitle : (offer.title || '');
+
+                const tDesc = window.t('offer.' + offer.id + '.desc');
+                const desc = (tDesc && !tDesc.startsWith('offer.')) ? tDesc : (offer.description || '');
 
                 return `
                     <div class="offer-card-pro">
                         ${discountHTML}
                         <div class="offer-card-body">
-                            <h3>${window.t('offer.' + offer.id + '.title')}</h3>
-                            <p>${window.t('offer.' + offer.id + '.desc')}</p>
-                            ${priceHTML}
-                            <a href="booking.html" class="btn-outline">${window.t('offer.book')}</a>
+                            <h3>${title}</h3>
+                            <p>${desc}</p>
+                            <div class="offer-card-footer">
+                                ${priceHTML}
+                                <a href="booking.html" class="btn-offer">${window.t('offer.book')}</a>
+                            </div>
                         </div>
                     </div>
                 `}).join('');

@@ -39,14 +39,23 @@ const DataStore = {
 
     // Initialize data
     init() {
+        // Force reset if legacy data exists or version mismatch
+        const DATA_VERSION = 'v2';
+        if (localStorage.getItem('im_data_version') !== DATA_VERSION) {
+            console.log('Migrating data to', DATA_VERSION);
+            localStorage.clear(); // Clear all old data
+            localStorage.setItem('im_data_version', DATA_VERSION);
+        }
+
         if (!localStorage.getItem('im_services')) {
             this.setServices(this.defaults.services);
         }
+
         const storedProducts = this.getProducts();
-        // Migration: Update if count differs or missing categories (old data)
         if (storedProducts.length < this.defaults.products.length || (storedProducts.length > 0 && !storedProducts[0].category)) {
             this.setProducts(this.defaults.products);
         }
+
         if (!localStorage.getItem('im_offers')) {
             this.setOffers(this.defaults.offers);
         }
