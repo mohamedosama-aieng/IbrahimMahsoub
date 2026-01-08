@@ -1,0 +1,100 @@
+# Staff Cluster, i18n, About & Contact Pages Implementation
+
+## Goal
+Implement new features for the Ibraheem Mahsob barbershop website:
+1. Replace the current "About Section" image placeholder with a 4-card staff cluster
+2. Create About page with staff grid and place photos
+3. Create Contact page with map and info cards
+4. Add AR/EN language toggle across all pages
+
+## Proposed Changes
+
+### New Files
+
+#### [NEW] [additions.css](file:///d:/Work/ibraheem-mahsob/css/additions.css)
+CSS-only file loaded LAST to avoid collisions. Contains:
+- `.staff-cluster`, `.staff-feature`, `.staff-row`, `.staff-card` - Home page staff cluster
+- `.about-staff-grid`, `.profile-card` - About page staff grid
+- `.place-photos-grid`, `.photo-slot` - About page photo placeholders
+- `.contact-grid`, `.map-frame`, `.info-card` - Contact page layout
+- `.lang-toggle` - Language toggle button styling
+
+---
+
+#### [NEW] [i18n.js](file:///d:/Work/ibraheem-mahsob/js/i18n.js)
+JavaScript i18n system:
+- `translations` object with [en](file:///d:/Work/ibraheem-mahsob/admin/admin.js#39-43) and [ar](file:///d:/Work/ibraheem-mahsob/booking.html#412-418) keys
+- `applyLang(lang)` function updates `html[lang]`, `html[dir]`, `body.rtl` class
+- Persists choice to `localStorage("site_lang")`
+- Wires `#langToggle` button click event
+- Default language: Arabic ([ar](file:///d:/Work/ibraheem-mahsob/booking.html#412-418))
+
+---
+
+#### [NEW] [about.html](file:///d:/Work/ibraheem-mahsob/about.html)
+New About page:
+- Copies header/nav/footer from [index.html](file:///d:/Work/ibraheem-mahsob/index.html)
+- Intro section
+- Staff grid (7 people: Ibrahim + 4 barbers + cashier + helper)
+- Place photos grid (6 placeholder slots)
+- Includes `additions.css` and `i18n.js`
+
+---
+
+#### [NEW] [contactus.html](file:///d:/Work/ibraheem-mahsob/contactus.html)
+New Contact page:
+- Copies header/nav/footer from [index.html](file:///d:/Work/ibraheem-mahsob/index.html)
+- Map iframe placeholder (left on desktop)
+- Info cards: address, phone, working hours (right on desktop)
+- Mobile: map first, then info cards stacked
+- Includes `additions.css` and `i18n.js`
+
+---
+
+### Modified Files
+
+#### [MODIFY] [index.html](file:///d:/Work/ibraheem-mahsob/index.html)
+Changes:
+1. Add `<link rel="stylesheet" href="css/additions.css">` after existing CSS
+2. Add `<script src="js/i18n.js"></script>` after [app.js](file:///d:/Work/ibraheem-mahsob/js/app.js)
+3. Add nav items: About, Contact, Language toggle button
+4. Add `data-i18n` attributes to nav links
+5. Replace the `.about-image` div (lines 169-179) with the new staff cluster HTML
+
+---
+
+#### [MODIFY] [services.html](file:///d:/Work/ibraheem-mahsob/services.html)
+Add:
+- `additions.css` link
+- `i18n.js` script
+- Nav items (About, Contact, Language toggle)
+- `data-i18n` attributes on nav links
+
+---
+
+#### [MODIFY] [products.html](file:///d:/Work/ibraheem-mahsob/products.html)
+Same additions as services.html
+
+---
+
+#### [MODIFY] [offers.html](file:///d:/Work/ibraheem-mahsob/offers.html)
+Same additions as services.html
+
+---
+
+#### [MODIFY] [booking.html](file:///d:/Work/ibraheem-mahsob/booking.html)
+Same additions as services.html
+
+---
+
+## Verification Plan
+
+### Manual Testing Checklist
+- [ ] **Desktop (1200+)**: Staff cluster shows Ibrahim wide card above, 3 barbers in row below
+- [ ] **Tablet (768-991)**: Layout stays symmetric, cards resize gracefully
+- [ ] **Mobile (360-430)**: Ibrahim first, then 3 barbers stacked vertically
+- [ ] **Language Toggle**: Click toggles AR/EN, updates text, flips `dir` attribute
+- [ ] **Persistence**: Refresh page, language choice persists from localStorage
+- [ ] **Hover Effects**: New cards have subtle lift effect, existing cards unchanged
+- [ ] **About Page**: Staff grid shows 7 cards, responsive at all breakpoints
+- [ ] **Contact Page**: Map left + info right on desktop, stacked on mobile

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض | Ibraheem Mahsob</title>
+    <meta name="description" content="عروض وخصومات حصرية من Ibraheem Mahsob">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" class="active" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero offers-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="hero-badge" data-i18n="offers.hero.badge">— عروض حصرية —</span>
+                <h1 data-i18n="offers.hero.title">العروض</h1>
+                <p data-i18n="offers.hero.subtitle">خصومات مميزة لفترة محدودة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Offer with Countdown -->
+    <section class="featured-offer-section">
+        <div class="container">
+            <div class="featured-offer" id="featuredOffer">
+                <div class="featured-offer-content">
+                    <span class="featured-badge" data-i18n="offers.featured.badge">عرض مميز</span>
+                    <h2 data-i18n="offers.featured.title">باقة العريس الفاخرة</h2>
+                    <p data-i18n="offers.featured.desc">احصل على الباقة الكاملة للعريس مع خصم خاص - حلاقة + تصفيف +
+                        عناية باللحية + ماسك للوجه</p>
+                    <div class="featured-price">
+                        <span class="old">500 <span class="currency-symbol" data-i18n="currency">ج.م</span></span>
+                        <span class="new">350 <span class="currency-symbol" data-i18n="currency">ج.م</span></span>
+                    </div>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="count-num" id="days">00</span>
+                            <span class="count-label" data-i18n="offers.countdown.days">يوم</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="count-num" id="hours">00</span>
+                            <span class="count-label" data-i18n="offers.countdown.hours">ساعة</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="count-num" id="minutes">00</span>
+                            <span class="count-label" data-i18n="offers.countdown.minutes">دقيقة</span>
+                        </div>
+                        <div class="countdown-sep">:</div>
+                        <div class="countdown-item">
+                            <span class="count-num" id="seconds">00</span>
+                            <span class="count-label" data-i18n="offers.countdown.seconds">ثانية</span>
+                        </div>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary" data-i18n="offers.btn">احجز الآن</a>
+                </div>
+                <div class="featured-offer-visual">
+                    <div class="offer-circle">
+                        <span class="discount-percent">30%</span>
+                        <span class="discount-text" data-i18n="offers.featured.discount">خصم</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Offers -->
+    <section class="offers-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="offers.grid.badge">— جميع العروض —</span>
+                <h2 class="section-title" data-i18n="offers.grid.title">عروض لا تفوتها</h2>
+            </div>
+
+            <!-- GRID LAYOUT: Changing direct children count or order may break responsive wrap -->
+            <div class="offers-grid" id="offersGrid">
+                <!-- CONTENT MANAGED BY INLINE SCRIPT (loadOffers) - DO NOT EDIT MANUALLY -->
+                <!-- Offers will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="offers.cta.title">لا تفوت الفرصة!</h2>
+                <p data-i18n="offers.cta.desc">العروض متاحة لفترة محدودة - احجز الآن</p>
+                <a href="booking.html" class="btn btn-primary" data-i18n="offers.cta.btn">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">IBRAHEEM MAHSOB</span>
+                    <p data-i18n="footer.desc">صالون حلاقة بريميوم</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="booking.html" data-i18n="nav.booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 data-i18n="footer.contact">تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin access: /admin/index.html -->
+
+    <!-- CRITICAL DEPENDENCY ORDER: START - app.js must trigger before inline scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadOffers();
+            startCountdown();
+        });
+
+        // Load offers
+        function loadOffers() {
+            const offers = DataStore.getOffers();
+            const container = document.getElementById('offersGrid');
+
+            if (offers.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <span class="empty-icon">🎁</span>
+                        <p data-i18n="offers.empty">لا توجد عروض حالياً</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = offers.map(offer => {
+                const discountHTML = offer.discount
+                    ? `<div class="offer-card-header"><span class="offer-discount">${offer.discount} ${window.t('offer.discount')}</span></div>`
+                    : `<div class="offer-card-header"><span class="offer-badge">${window.t('offer.special')}</span></div>`;
+
+                const priceHTML = (offer.oldPrice && offer.newPrice)
+                    ? `<div class="offer-price">
+                               <span class="old">${offer.oldPrice} ${window.t('currency')}</span>
+                               <span class="new">${offer.newPrice} ${window.t('currency')}</span>
+                           </div>`
+                    : (offer.oldPrice
+                        ? `<div class="offer-price"><span class="new">${offer.oldPrice} ${window.t('currency')}</span></div>`
+                        : `<div class="offer-price"></div>`); // Handle case with no specific price shown
+
+                return `
+                    <div class="offer-card-pro">
+                        ${discountHTML}
+                        <div class="offer-card-body">
+                            <h3>${window.t('offer.' + offer.id + '.title')}</h3>
+                            <p>${window.t('offer.' + offer.id + '.desc')}</p>
+                            ${priceHTML}
+                            <a href="booking.html" class="btn-outline">${window.t('offer.book')}</a>
+                        </div>
+                    </div>
+                `}).join('');
+        }
+
+        // Countdown timer
+        function startCountdown() {
+            // Set end date to 7 days from now
+            const endDate = new Date();
+            endDate.setDate(endDate.getDate() + 7);
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate.getTime() - now;
+
+                if (distance < 0) {
+                    document.getElementById('countdown').innerHTML = '<p>انتهى العرض</p>';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+        // Hook for language change re-rendering
+        window.reloadDynamicContent = function () {
+            if (typeof loadOffers === 'function') loadOffers();
+            // Update currency in featured offer if static
+            const curr = document.querySelectorAll('.currency-symbol');
+            curr.forEach(el => el.textContent = window.t('currency'));
+        };
+    </script>
+    <!-- CRITICAL DEPENDENCY ORDER: END -->
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات | Ibraheem Mahsob</title>
+    <meta name="description" content="خدمات الحلاقة الفاخرة من Ibraheem Mahsob">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" class="active" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="services-hero-bg"></div>
+        <div class="container">
+            <div class="services-hero-content">
+                <div class="hero-line"></div>
+                <span class="services-hero-badge" data-i18n="services.hero.badge">PREMIUM SERVICES</span>
+                <h1 data-i18n="services.hero.title">خدماتنا</h1>
+                <p data-i18n="services.hero.subtitle">تجربة حلاقة فاخرة لا تُنسى بأيدي محترفين</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section class="services-intro-section">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-stat">
+                    <span class="stat-number" data-i18n="services.stat.years">10+</span>
+                    <span class="stat-label" data-i18n="services.stat.yearsLabel">سنوات خبرة</span>
+                </div>
+                <div class="intro-text">
+                    <p data-i18n="services.intro.text">نقدم لك مجموعة متكاملة من خدمات الحلاقة والعناية بالشعر واللحية،
+                        باستخدام أفضل الأدوات والمنتجات
+                        العالمية. كل خدمة مصممة لتمنحك تجربة استثنائية.</p>
+                </div>
+                <div class="intro-stat">
+                    <span class="stat-number" data-i18n="services.stat.clients">5K+</span>
+                    <span class="stat-label" data-i18n="services.stat.clientsLabel">عميل سعيد</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="main-services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="services.main.badge">— خدماتنا الأساسية —</span>
+                <h2 class="section-title" data-i18n="services.main.title">اختر خدمتك</h2>
+            </div>
+
+            <div class="services-showcase" id="servicesShowcase">
+                <!-- CONTENT MANAGED BY INLINE SCRIPT (loadServices) - Uses 'service-showcase-item' class structure -->
+                <!-- WARNING: Do not replace with app.js UI.renderServices() (uses different 'service-card' layout) -->
+                <!-- Services will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="services.process.badge">— كيف نعمل —</span>
+                <h2 class="section-title" data-i18n="services.process.title">خطوات بسيطة</h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 data-i18n="services.process.step1.title">احجز موعدك</h3>
+                        <p data-i18n="services.process.step1.desc">اختر الخدمة والوقت المناسب لك من خلال نظام الحجز
+                            السهل</p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 data-i18n="services.process.step2.title">استشارة مجانية</h3>
+                        <p data-i18n="services.process.step2.desc">نناقش معك أفضل الخيارات لتحصل على النتيجة المثالية
+                        </p>
+                    </div>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 data-i18n="services.process.step3.title">تجربة فاخرة</h3>
+                        <p data-i18n="services.process.step3.desc">استمتع بخدمة احترافية في أجواء راقية ومريحة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>✂️</span>
+                    </div>
+                    <h3 data-i18n="services.feature1.title">أدوات احترافية</h3>
+                    <p data-i18n="services.feature1.desc">نستخدم أحدث الأدوات والمعدات من أفضل الماركات العالمية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>🧴</span>
+                    </div>
+                    <h3 data-i18n="services.feature2.title">منتجات فاخرة</h3>
+                    <p data-i18n="services.feature2.desc">منتجات عناية أصلية ومستوردة لنتائج استثنائية</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>⏱️</span>
+                    </div>
+                    <h3 data-i18n="services.feature3.title">التزام بالمواعيد</h3>
+                    <p data-i18n="services.feature3.desc">نحترم وقتك ونلتزم بالموعد المحدد دون تأخير</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span>💯</span>
+                    </div>
+                    <h3 data-i18n="services.feature4.title">ضمان الرضا</h3>
+                    <p data-i18n="services.feature4.desc">رضاك هو هدفنا الأول ونضمن لك تجربة مميزة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <h2 data-i18n="services.cta.title">جاهز لتجربة مميزة؟</h2>
+                    <p data-i18n="services.cta.desc">احجز موعدك الآن واستمتع بخدمة احترافية لا تُنسى</p>
+                </div>
+                <a href="booking.html" class="btn btn-primary btn-large" data-i18n="services.cta.btn">احجز موعدك</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">IBRAHEEM MAHSOB</span>
+                    <p data-i18n="footer.desc">صالون حلاقة بريميوم</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="booking.html" data-i18n="nav.booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 data-i18n="footer.contact">تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin access: /admin/index.html -->
+
+    <!-- CRITICAL DEPENDENCY ORDER: START - app.js must trigger before inline scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Hook for language change re-rendering
+        window.reloadDynamicContent = function () {
+            if (typeof loadServices === 'function') loadServices();
+        };
+    </script>
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadServices();
+        });
+
+        // Load services with premium design
+        function loadServices() {
+            const services = DataStore.getServices();
+            const container = document.getElementById('servicesShowcase');
+
+            container.innerHTML = services.map(service => `
+                    <div class="service-showcase-item">
+                        <div class="service-icon">
+                            ${service.icon || '✂️'}
+                        </div>
+                        <div class="service-info">
+                            <h3 class="service-title">${window.t('service.' + service.id + '.name')}</h3>
+                            <p class="service-desc">${window.t('service.' + service.id + '.desc')}</p>
+                            <div class="service-meta">
+                                <span class="service-time">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    ${window.t('service.time')}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="service-action">
+                            <div class="service-price">${service.price} ${window.t('currency')}</div>
+                            <a href="booking.html" class="btn-sm">${window.t('service.book')}</a>
+                        </div>
+                    </div>
+                `).join('');
+        }
+    </script>
+    <!-- CRITICAL DEPENDENCY ORDER: END -->
+</body>
+
+</html>

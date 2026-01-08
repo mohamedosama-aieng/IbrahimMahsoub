@@ -1,0 +1,244 @@
+/* =========================================
+   ADDITIONS (SAFE FILE) - NO REFACTOR
+   ========================================= */
+
+/* ---------- Home Staff Cluster ---------- */
+.staff-cluster {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 28px;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.staff-feature {
+    width: min(520px, 100%);
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.staff-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 26px;
+    width: min(760px, 100%);
+    align-items: stretch;
+}
+
+.staff-card {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    min-height: 260px;
+}
+
+.staff-card__img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.staff-feature .staff-card__img {
+    min-height: 320px;
+}
+
+.staff-card__name {
+    position: absolute;
+    inset-inline-start: 14px;
+    inset-inline-end: 14px;
+    bottom: 14px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Hover: subtle, premium */
+.staff-card:hover,
+.staff-feature:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* Mobile: Ibrahim first then vertical */
+@media (max-width:768px) {
+    .staff-row {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .staff-feature {
+        width: 100%;
+    }
+}
+
+/* ---------- About Staff Grid ---------- */
+.about-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width:992px) {
+    .about-staff-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width:600px) {
+    .about-staff-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-card {
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+}
+
+.profile-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.profile-card__body {
+    padding: 14px;
+}
+
+.profile-card__title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.profile-card__desc {
+    opacity: 0.8;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ---------- Place Photos Grid ---------- */
+.place-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+@media (max-width:992px) {
+    .place-photos-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width:600px) {
+    .place-photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.photo-slot {
+    border-radius: 18px;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.03);
+    height: 220px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 16px;
+    transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.photo-slot:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* ---------- Contact Page ---------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+@media (max-width:992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.map-frame {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    min-height: 520px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 520px;
+    border: 0;
+    display: block;
+}
+
+.info-card {
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.40);
+}
+
+/* ---------- Language Toggle ---------- */
+.lang-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 999px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: transform 220ms ease, border-color 220ms ease;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.lang-toggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.20);
+}

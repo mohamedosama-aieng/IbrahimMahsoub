@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات | Ibraheem Mahsob</title>
+    <meta name="description" content="منتجات العناية بالشعر واللحية من Ibraheem Mahsob">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" class="active" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="hero-badge" data-i18n="products.hero.badge">— المنتجات —</span>
+                <h1 data-i18n="products.hero.title">منتجاتنا</h1>
+                <p data-i18n="products.hero.subtitle">منتجات فاخرة للعناية بالشعر واللحية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Categories -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Categories Filter -->
+            <div class="products-filter">
+                <button class="filter-btn active" data-category="all" data-i18n="products.filter.all">الكل</button>
+                <button class="filter-btn" data-category="hair" data-i18n="products.filter.hair">العناية بالشعر</button>
+                <button class="filter-btn" data-category="beard" data-i18n="products.filter.beard">العناية
+                    باللحية</button>
+                <button class="filter-btn" data-category="styling" data-i18n="products.filter.styling">التصفيف</button>
+            </div>
+
+            <!-- Products Grid -->
+            <!-- GRID LAYOUT: Changing direct children count or order may break responsive wrap -->
+            <div class="products-grid" id="productsGrid">
+                <!-- CONTENT MANAGED BY INLINE SCRIPT (renderProducts) - DO NOT EDIT MANUALLY -->
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-modal-content">
+            <button class="modal-close" onclick="closeProductModal()">×</button>
+            <div class="product-modal-grid">
+                <div class="product-modal-image">
+                    <div class="product-image-placeholder" id="modalProductImage">
+                        <span id="modalProductIcon">💈</span>
+                    </div>
+                </div>
+                <div class="product-modal-info">
+                    <span class="product-category" id="modalProductCategory">—</span>
+                    <h2 id="modalProductName">—</h2>
+                    <p class="product-description" id="modalProductDesc">—</p>
+                    <div class="product-price-large" id="modalProductPrice">—</div>
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span data-i18n="products.modal.authentic">منتج أصلي 100%</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span data-i18n="products.modal.quality">جودة عالية</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <span data-i18n="products.modal.available">متوفر في الصالون</span>
+                        </div>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary" data-i18n="products.modal.bookBtn">احجز واحصل
+                        عليه</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="products.cta.title">هل تريد تجربة منتجاتنا؟</h2>
+                <p data-i18n="products.cta.desc">احجز موعدك الآن واحصل على استشارة مجانية من خبرائنا</p>
+                <a href="booking.html" class="btn btn-primary" data-i18n="products.cta.btn">احجز الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">IBRAHEEM MAHSOB</span>
+                    <p data-i18n="footer.desc">صالون حلاقة بريميوم</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="booking.html" data-i18n="nav.booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 data-i18n="footer.contact">تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin access: /admin/index.html -->
+
+    <!-- CRITICAL DEPENDENCY ORDER: START -->
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            setupFilter();
+        });
+
+        // Load products
+        function loadProducts() {
+            const products = DataStore.getProducts();
+            renderProducts(products);
+        }
+
+        // Render products
+        function renderProducts(products) {
+            const container = document.getElementById('productsGrid');
+
+            if (products.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <span class="empty-icon">📦</span>
+                        <p data-i18n="products.empty">لا توجد منتجات حالياً</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = products.map(product => `
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- Placeholder -->
+                            <div style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; background:#1a1a1a; color:#555; font-size:40px;">
+                                💈
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category-tag">${window.t('products.filter.' + product.category)}</span>
+                            <h3>${window.t('product.' + product.id + '.name')}</h3>
+                            <p>${window.t('product.' + product.id + '.desc')}</p>
+                            <div class="product-card-footer">
+                                <span class="product-price">${product.price} ${window.t('currency')}</span>
+                                <button class="product-btn" onclick="openProductModal(${product.id})">${window.t('product.details')}</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+        }
+
+        // Get category name
+        function getCategoryName(category) {
+            const names = {
+                'hair': 'العناية بالشعر',
+                'beard': 'العناية باللحية',
+                'styling': 'التصفيف'
+            };
+            return names[category] || 'منتج';
+        }
+
+        // Setup filter
+        function setupFilter() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const category = btn.dataset.category;
+                    const products = DataStore.getProducts();
+
+                    if (category === 'all') {
+                        renderProducts(products);
+                    } else {
+                        renderProducts(products.filter(p => p.category === category));
+                    }
+                });
+            });
+        }
+
+        // Open product modal
+        function openProductModal(id) {
+            const products = DataStore.getProducts();
+            const product = products.find(p => p.id === id);
+            const modal = document.getElementById('productModal');
+
+            if (product) {
+                document.getElementById('modalProductIcon').textContent = product.icon || '💈';
+                document.getElementById('modalProductCategory').textContent = window.t('products.filter.' + product.category);
+                document.getElementById('modalProductName').textContent = window.t('product.' + product.id + '.name');
+                document.getElementById('modalProductDesc').textContent = window.t('product.' + product.id + '.desc');
+                document.getElementById('modalProductPrice').textContent = product.price + ' ' + window.t('currency');
+
+                // Image placeholdering
+                document.getElementById('modalProductImage').innerHTML = `
+                    <div style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; background:#1a1a1a; color:#555; font-size:60px;">
+                        💈
+                    </div>
+                `;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close product modal
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Hook for language change re-rendering
+        window.reloadDynamicContent = function () {
+            if (typeof loadProducts === 'function') loadProducts();
+        };
+        // Close modal on outside click
+        document.getElementById('productModal').addEventListener('click', (e) => {
+            if (e.target.id === 'productModal') {
+                closeProductModal();
+            }
+        });
+    </script>
+    <!-- CRITICAL DEPENDENCY ORDER: END -->
+</body>
+
+</html>

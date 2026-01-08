@@ -1,0 +1,194 @@
+<!-- about.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title data-i18n="about.title">تعرف علينا</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Add this LAST: -->
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <!-- NAV TOGGLE: Used by app.js (UI.toggleMobileMenu) - DO NOT RENAME ID -->
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" class="active" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="about-content" style="padding: 120px 0 80px;">
+        <div class="container">
+            <h1 class="section-title" data-i18n="about.title">تعرف علينا</h1>
+            <p style="max-width: 680px; opacity: .85; line-height: 1.8;" data-i18n="about.intro">
+                تجربة عناية مميزة تعتمد على المهارة والاهتمام.
+            </p>
+
+            <section style="margin-top: 40px;">
+                <h2 class="section-title" data-i18n="about.staffTitle">فريق العمل</h2>
+
+                <!-- PHOTO SPECS: 1200x1600 recommended, 600x800 minimum -->
+                <div class="about-staff-grid" style="margin-top: 18px;">
+                    <!-- Ibrahim -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='80' fill='%23555'%3EIbrahim%3C/text%3E%3C/svg%3E"
+                            alt="Ibrahim Mahsob">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Ibrahim Mahsob</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Barber 1 -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 1%3C/text%3E%3C/svg%3E"
+                            alt="Barber 1">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Barber 1</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Barber 2 -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 2%3C/text%3E%3C/svg%3E"
+                            alt="Barber 2">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Barber 2</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Barber 3 -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 3%3C/text%3E%3C/svg%3E"
+                            alt="Barber 3">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Barber 3</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Barber 4 -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 4%3C/text%3E%3C/svg%3E"
+                            alt="Barber 4">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Barber 4</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Cashier -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3ECashier%3C/text%3E%3C/svg%3E"
+                            alt="Cashier">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Cashier</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+
+                    <!-- Helper -->
+                    <div class="profile-card">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EHelper%3C/text%3E%3C/svg%3E"
+                            alt="Helper">
+                        <div class="profile-card__body">
+                            <div class="profile-card__title">Helper</div>
+                            <div class="profile-card__desc">Brief 1–2 lines description.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 48px;">
+                <h2 class="section-title" data-i18n="about.placeTitle">صور المكان</h2>
+                <p style="opacity:.8; line-height:1.8; max-width:700px;">
+                    Templates below — replace with real salon images later.
+                </p>
+
+                <!-- Suggested photo size for place photos: 1200x800 (3:2 or 16:9 ok) -->
+                <div class="place-photos-grid" style="margin-top: 18px;">
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                    <div class="photo-slot">Place Photo (1200×800)</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">IBRAHEEM</span>
+                        <span class="logo-sub">MAHSOB</span>
+                    </a>
+                    <p data-i18n="footer.desc">صالون حلاقة عصري يقدم خدمات متكاملة للرجل العصري بأحدث التقنيات وأفضل
+                        المنتجات.</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="booking.html" data-i18n="nav.booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 data-i18n="footer.contact">تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add i18n AFTER app.js -->
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>

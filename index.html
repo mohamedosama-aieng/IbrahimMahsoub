@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibraheem Mahsob | صالون حلاقة بريميوم</title>
+    <meta name="description" content="صالون Ibraheem Mahsob للحلاقة الرجالية - خدمات بريميوم وتجربة فاخرة">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <!-- ID 'loadingScreen' used by inline JS window.load event. Do not remove. -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">IBRAHEEM</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <!-- NAV TOGGLE: Used by app.js (UI.toggleMobileMenu) - DO NOT RENAME ID -->
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">PREMIUM BARBERSHOP</span>
+            <h1 class="hero-title">
+                <span class="title-line">IBRAHEEM</span>
+                <span class="title-line gold">MAHSOB</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="home.hero.subtitle">تجربة حلاقة فاخرة تليق بك</p>
+            <div class="hero-buttons">
+                <a href="booking.html" class="btn btn-primary" data-i18n="home.hero.bookVideo">احجز موعدك</a>
+                <a href="services.html" class="btn btn-outline" data-i18n="home.hero.services">استكشف خدماتنا</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-i18n="home.hero.discover">اكتشف المزيد</span>
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section services-preview reveal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="home.section.services">خدماتنا</span>
+                <h2 class="section-title" data-i18n="home.section.services.subtitle">ما نقدمه لك</h2>
+            </div>
+            <!-- GRID LAYOUT: Changing direct children count or order may break responsive wrap -->
+            <!-- NOTE: This section is STATIC content. Does not use app.js injection. -->
+            <div class="services-grid">
+                <div class="service-card reveal-item">
+                    <div class="service-icon">✂️</div>
+                    <h3 data-i18n="home.services.classic">حلاقة كلاسيكية</h3>
+                    <p data-i18n="home.services.classic.desc">قص شعر احترافي مع تصفيف مميز</p>
+                    <span class="service-price">50 ج.م</span>
+                </div>
+                <div class="service-card reveal-item">
+                    <div class="service-icon">🧔</div>
+                    <h3 data-i18n="home.services.beard">تهذيب اللحية</h3>
+                    <p data-i18n="home.services.beard.desc">تشكيل وتهذيب اللحية باحترافية</p>
+                    <span class="service-price">30 ج.م</span>
+                </div>
+                <div class="service-card reveal-item">
+                    <div class="service-icon">💈</div>
+                    <h3 data-i18n="home.services.royal">حلاقة ملكية</h3>
+                    <p data-i18n="home.services.royal.desc">تجربة حلاقة VIP كاملة مع ماسك</p>
+                    <span class="service-price">100 ج.م</span>
+                </div>
+                <div class="service-card reveal-item">
+                    <div class="service-icon">🎨</div>
+                    <h3 data-i18n="home.services.color">صبغة شعر</h3>
+                    <p data-i18n="home.services.color.desc">ألوان عصرية وصبغات طبيعية</p>
+                    <span class="service-price">80 ج.م</span>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="services.html" class="btn btn-secondary" data-i18n="home.services.viewAll">عرض كل الخدمات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section reveal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="home.section.gallery">أعمالنا</span>
+                <h2 class="section-title" data-i18n="home.section.gallery.title">معرض الصور</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large reveal-item">
+                    <div class="gallery-placeholder">
+                        <span>01</span>
+                        <div class="gallery-overlay">
+                            <span>حلاقة كلاسيكية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-item">
+                    <div class="gallery-placeholder">
+                        <span>02</span>
+                        <div class="gallery-overlay">
+                            <span>تهذيب لحية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-item">
+                    <div class="gallery-placeholder">
+                        <span>03</span>
+                        <div class="gallery-overlay">
+                            <span>صبغة عصرية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-item">
+                    <div class="gallery-placeholder">
+                        <span>04</span>
+                        <div class="gallery-overlay">
+                            <span>تصفيف احترافي</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item wide reveal-item">
+                    <div class="gallery-placeholder">
+                        <span>05</span>
+                        <div class="gallery-overlay">
+                            <span>باقة العريس</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section reveal-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-item">
+                    <!-- STAFF CLUSTER (HOME) -->
+                    <!-- PHOTO SPECS:
+                         Recommended: 1200x1600 (3:4 portrait)
+                         Minimum: 600x800
+                         Crop behavior: object-fit: cover, object-position: center top
+                    -->
+                    <div class="staff-cluster">
+                        <!-- Featured (Ibrahim) -->
+                        <div class="staff-feature">
+                            <img class="staff-card__img"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1600' viewBox='0 0 1200 1600'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='80' fill='%23555'%3EIbrahim%3C/text%3E%3C/svg%3E"
+                                alt="Ibrahim Mahsob">
+                            <div class="staff-card__name" data-i18n="home.staff.ibrahim">Ibrahim Mahsob</div>
+                        </div>
+
+                        <!-- 3 Barbers -->
+                        <div class="staff-row">
+                            <div class="staff-card">
+                                <img class="staff-card__img"
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' viewBox='0 0 600 800'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 1%3C/text%3E%3C/svg%3E"
+                                    alt="Barber 1">
+                                <div class="staff-card__name" data-i18n="home.staff.b1">Barber 1</div>
+                            </div>
+
+                            <div class="staff-card">
+                                <img class="staff-card__img"
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' viewBox='0 0 600 800'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 2%3C/text%3E%3C/svg%3E"
+                                    alt="Barber 2">
+                                <div class="staff-card__name" data-i18n="home.staff.b2">Barber 2</div>
+                            </div>
+
+                            <div class="staff-card">
+                                <img class="staff-card__img"
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' viewBox='0 0 600 800'%3E%3Crect width='100%25' height='100%25' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='40' fill='%23555'%3EBarber 3%3C/text%3E%3C/svg%3E"
+                                    alt="Barber 3">
+                                <div class="staff-card__name" data-i18n="home.staff.b3">Barber 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal-item">
+                    <span class="section-badge" data-i18n="home.section.about">من نحن</span>
+                    <h2 class="section-title" data-i18n="home.section.about.title">أكثر من مجرد صالون</h2>
+                    <p class="about-text" data-i18n="home.about.text">
+                        في Ibraheem Mahsob، نؤمن بأن الحلاقة فن وليست مجرد خدمة.
+                        نقدم لك تجربة فريدة تجمع بين الأناقة والراحة والاحترافية.
+                    </p>
+                    <ul class="about-features">
+                        <li><span class="check">✓</span> <span data-i18n="home.about.feature1">خبراء محترفين</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="home.about.feature2">منتجات عالمية</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="home.about.feature3">بيئة راقية</span></li>
+                        <li><span class="check">✓</span> <span data-i18n="home.about.feature4">حجز سهل</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section reveal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="home.section.reviews">آراء العملاء</span>
+                <h2 class="section-title" data-i18n="home.section.reviews.title">ماذا يقول عملاؤنا</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-item">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">أفضل صالون حلاقة زرته على الإطلاق. الخدمة ممتازة والمكان راقي جداً.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">أ</div>
+                        <div class="author-info">
+                            <h4>أحمد محمد</h4>
+                            <span>عميل دائم</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-item">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">احترافية عالية في العمل. دائماً أخرج راضياً من الصالون.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">م</div>
+                        <div class="author-info">
+                            <h4>محمود سعيد</h4>
+                            <span>عميل منذ 3 سنوات</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-item">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">تجربة مميزة وفريدة. أنصح الجميع بتجربة خدماتهم.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ك</div>
+                        <div class="author-info">
+                            <h4>كريم حسن</h4>
+                            <span>عميل جديد</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="section offers-section reveal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge gold-badge" data-i18n="home.section.offers">عروض حصرية</span>
+                <h2 class="section-title" data-i18n="home.section.offers.title">عروض لا تفوتك</h2>
+            </div>
+            <div class="offers-slider" id="offersSlider">
+                <!-- CONTENT MANAGED BY JS (app.js + inline script below) - DO NOT EDIT MANUALLY -->
+                <!-- Offers will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section reveal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-i18n="home.section.faq">الأسئلة الشائعة</span>
+                <h2 class="section-title" data-i18n="home.section.faq.title">إجابات على تساؤلاتك</h2>
+            </div>
+            <!-- FAQ CONTAINER: Classes 'faq-item' and 'active' are toggled by JS. Do not rename. -->
+            <div class="faq-grid">
+                <div class="faq-item reveal-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="home.faq.q1">هل يجب الحجز مسبقاً؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="home.faq.a1">يُفضل الحجز المسبق لضمان الحصول على موعد مناسب، لكننا نستقبل العملاء
+                            بدون حجز حسب التوفر.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="home.faq.q2">ما هي طرق الدفع المتاحة؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="home.faq.a2">نقبل الدفع نقداً وبالبطاقات الائتمانية وكذلك المحافظ الإلكترونية.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="home.faq.q3">هل تقدمون خدمات للأطفال؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="home.faq.a3">نعم، نقدم خدمات قص الشعر للأطفال بأسعار مخفضة وبأجواء مريحة لهم.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="home.faq.q4">ما هي ساعات العمل؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="home.faq.a4">نعمل يومياً من الساعة 10 صباحاً حتى 10 مساءً.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">IBRAHEEM MAHSOB</span>
+                    <p data-i18n="footer.desc">صالون حلاقة بريميوم</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks" style="color:var(--white); margin-bottom:15px; display:none;">
+                        روابط سريعة</h3>
+                    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+                    <a href="services.html" data-i18n="nav.services">الخدمات</a>
+                    <a href="products.html" data-i18n="nav.products">المنتجات</a>
+                    <a href="offers.html" data-i18n="nav.offers">العروض</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📸</a>
+                    <a href="#" class="social-link">💬</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Link (Hidden) -->
+    <!-- Admin access: /admin/index.html -->
+
+    <!-- CRITICAL DEPENDENCY ORDER: START - app.js must trigger before inline scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        // Loading screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Scroll reveal
+        function initScrollReveal() {
+            // CLASSES 'reveal-item' and 'reveal-section' are vital for animation logic.
+            const revealItems = document.querySelectorAll('.reveal-item, .reveal-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealItems.forEach(item => observer.observe(item));
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked if not already active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollReveal();
+
+            // Load offers
+            const offers = DataStore.getOffers();
+            const offersSlider = document.getElementById('offersSlider');
+            if (offersSlider && offers.length > 0) {
+                offersSlider.innerHTML = offers.map(offer => `
+                    <div class="offer-card">
+                        <span class="offer-badge">خصم ${offer.discount}%</span>
+                        <h3>${offer.name}</h3>
+                        <p>${offer.description}</p>
+                        <div class="offer-price">
+                            <span class="old-price">${offer.oldPrice} ج.م</span>
+                            <span class="new-price">${offer.newPrice} ج.م</span>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
+    <!-- CRITICAL DEPENDENCY ORDER: END -->
+</body>
+
+</html>

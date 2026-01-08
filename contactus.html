@@ -1,0 +1,122 @@
+<!-- contactus.html -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title data-i18n="contact.title">زورنا أو تواصل معنا</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Add this LAST: -->
+    <link rel="stylesheet" href="css/additions.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">IBRAHEEM</span>
+                <span class="logo-sub">MAHSOB</span>
+            </a>
+            <!-- NAV TOGGLE: Used by app.js (UI.toggleMobileMenu) - DO NOT RENAME ID -->
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                <li><a href="products.html" data-i18n="nav.products">المنتجات</a></li>
+                <li><a href="offers.html" data-i18n="nav.offers">العروض</a></li>
+                <li><a href="about.html" data-i18n="nav.about">تعرف علينا</a></li>
+                <li><a href="contactus.html" class="active" data-i18n="nav.contact">تواصل معنا</a></li>
+                <li><a href="booking.html" class="btn-nav" data-i18n="nav.booking">احجز الآن</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+                        <span id="langLabel">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding: 120px 0 80px;">
+        <div class="container">
+            <h1 class="section-title" data-i18n="contact.title">زورنا أو تواصل معنا</h1>
+
+            <div class="contact-grid" style="margin-top: 22px;">
+                <div class="map-frame">
+                    <!-- PASTE EMBED URL HERE -->
+                    <iframe src="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Google Map">
+                    </iframe>
+                </div>
+
+                <div>
+                    <div class="info-card">
+                        <div style="font-weight:700; margin-bottom:8px;" data-i18n="contact.addressLabel">العنوان</div>
+                        <div data-i18n="contact.addressValue">شارع رئيسي، المنطقة</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div style="font-weight:700; margin-bottom:8px;" data-i18n="contact.phoneLabel">الهاتف</div>
+                        <div data-i18n="contact.phoneValue">01000000000</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div style="font-weight:700; margin-bottom:8px;" data-i18n="contact.hoursLabel">ساعات العمل
+                        </div>
+                        <div data-i18n="contact.hoursValue">يوميًا من 10 صباحًا - 10 مساءً</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">IBRAHEEM</span>
+                        <span class="logo-sub">MAHSOB</span>
+                    </a>
+                    <p data-i18n="footer.desc">صالون حلاقة عصري يقدم خدمات متكاملة للرجل العصري بأحدث التقنيات وأفضل
+                        المنتجات.</p>
+                </div>
+                <div class="footer-links">
+                    <h3 data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">الخدمات</a></li>
+                        <li><a href="booking.html" data-i18n="nav.booking">الحجز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3 data-i18n="footer.contact">تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+
+</html>

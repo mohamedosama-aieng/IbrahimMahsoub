@@ -1,0 +1,502 @@
+(function () {
+    const translations = {
+        en: {
+            "nav.home": "Home",
+            "nav.services": "Services",
+            "nav.products": "Products",
+            "nav.offers": "Offers",
+            "nav.booking": "Book Now",
+            "nav.about": "About",
+            "nav.contact": "Contact",
+
+            // Dynamic Content - Services
+            "service.1.name": "Classic Haircut",
+            "service.1.desc": "Professional haircut with expert styling",
+            "service.2.name": "Beard Grooming",
+            "service.2.desc": "Professional beard shaping and trimming",
+            "service.3.name": "Royal Shave",
+            "service.3.desc": "Full VIP shave experience with mask",
+            "service.4.name": "Hair Coloring",
+            "service.4.desc": "Modern colors and natural dyes",
+            "service.5.name": "Kids Haircut",
+            "service.5.desc": "Careful haircut for children",
+            "service.6.name": "Hair Spa",
+            "service.6.desc": "Deep treatment and hydration for hair",
+            "service.time": "30-45 mins",
+            "service.book": "Book",
+
+            // Dynamic Content - Products
+            "product.1.name": "Premium Shampoo",
+            "product.1.desc": "Daily care shampoo for hair",
+            "product.2.name": "Styling Gel",
+            "product.2.desc": "Strong hold styling gel",
+            "product.3.name": "Beard Oil",
+            "product.3.desc": "Natural oil for beard care",
+            "product.4.name": "Hair Color",
+            "product.4.desc": "Natural hair dye",
+            "product.5.name": "Beard Balm",
+            "product.5.desc": "Moisturizer for beard",
+            "product.6.name": "Hair Wax",
+            "product.6.desc": "Matte finish hold",
+            "product.details": "Details",
+            "product.viewDetails": "View Details",
+
+            // Dynamic Content - Offers
+            "offer.1.title": "Groom Package",
+            "offer.1.desc": "Haircut + Beard + Mask + Spa",
+            "offer.2.title": "Student Discount",
+            "offer.2.desc": "20% off on all services",
+            "offer.discount": "OFF",
+            "offer.special": "Special Offer",
+            "offer.book": "Book Now",
+
+            "currency": "EGP",
+
+            "home.hero.subtitle": "A premium grooming experience that suits you",
+            "home.hero.bookVideo": "Book Appointment",
+            "home.hero.services": "Explore Services",
+            "home.hero.discover": "Discover More",
+            "home.section.services": "Our Services",
+            "home.section.services.subtitle": "What We Offer",
+            "home.services.classic": "Classic Haircut",
+            "home.services.classic.desc": "Professional haircut with expert styling",
+            "home.services.beard": "Beard Grooming",
+            "home.services.beard.desc": "Professional beard shaping and trimming",
+            "home.services.royal": "Royal Shave",
+            "home.services.royal.desc": "Full VIP shave experience with mask",
+            "home.services.color": "Hair Coloring",
+            "home.services.color.desc": "Modern colors and natural dyes",
+            "home.services.viewAll": "View All Services",
+            "home.section.gallery": "Gallery",
+            "home.section.gallery.title": "Our Work",
+            "home.section.about": "About Us",
+            "home.section.about.title": "More Than Just A Salon",
+            "home.about.text": "At Ibraheem Mahsob, we believe barbering is an art, not just a service. We offer you a unique experience combining elegance, comfort, and professionalism.",
+            "home.about.feature1": "Professional Experts",
+            "home.about.feature2": "World-Class Products",
+            "home.about.feature3": "Premium Environment",
+            "home.about.feature4": "Easy Booking",
+            "home.staff.ibrahim": "Ibrahim Mahsob",
+            "home.staff.b1": "Barber 1",
+            "home.staff.b2": "Barber 2",
+            "home.staff.b3": "Barber 3",
+            "home.section.reviews": "Testimonials",
+            "home.section.reviews.title": "What Our Clients Say",
+            "home.section.offers": "Exclusive Offers",
+            "home.section.offers.title": "Deals Not To Miss",
+            "home.section.faq": "FAQ",
+            "home.section.faq.title": "Answers To Your Questions",
+            "home.faq.q1": "Do I need to book in advance?",
+            "home.faq.a1": "We prefer advance booking to ensure a suitable slot, but we accept walk-ins based on availability.",
+            "home.faq.q2": "What payment methods are available?",
+            "home.faq.a2": "We accept cash, credit cards, and e-wallets.",
+            "home.faq.q3": "Do you offer services for children?",
+            "home.faq.a3": "Yes, we offer haircuts for children at reduced rates in a comfortable atmosphere.",
+            "home.faq.q4": "What are your working hours?",
+            "home.faq.a4": "We work daily from 10 AM to 10 PM.",
+            "home.section.contact": "Contact Us",
+            "home.section.contact.title": "Visit or Contact Us",
+
+            "services.hero.badge": "PREMIUM SERVICES",
+            "services.hero.title": "Our Services",
+            "services.hero.subtitle": "An unforgettable luxury grooming experience by professionals",
+            "services.stat.years": "10+",
+            "services.stat.yearsLabel": "Years Experience",
+            "services.intro.text": "We offer a complete range of grooming services using the best tools and global products. Every service is designed to give you an exceptional experience.",
+            "services.stat.clients": "5K+",
+            "services.stat.clientsLabel": "Happy Clients",
+            "services.main.badge": "— Core Services —",
+            "services.main.title": "Choose Your Service",
+            "services.process.badge": "— How We Work —",
+            "services.process.title": "Simple Steps",
+            "services.process.step1.title": "Book Appointment",
+            "services.process.step1.desc": "Choose your service and time via our easy booking system",
+            "services.process.step2.title": "Free Consultation",
+            "services.process.step2.desc": "We discuss the best options to achieve the perfect result",
+            "services.process.step3.title": "Luxury Experience",
+            "services.process.step3.desc": "Enjoy professional service in a classy, comfortable atmosphere",
+            "services.feature1.title": "Professional Tools",
+            "services.feature1.desc": "We use the latest equipment from top global brands",
+            "services.feature2.title": "Luxury Products",
+            "services.feature2.desc": "Authentic imported care products for exceptional results",
+            "services.feature3.title": "Punctuality",
+            "services.feature3.desc": "We respect your time and stick to the schedule without delay",
+            "services.feature4.title": "Satisfaction Guaranteed",
+            "services.feature4.desc": "Your satisfaction is our goal and we guarantee a unique experience",
+            "services.cta.title": "Ready for a unique experience?",
+            "services.cta.desc": "Book your appointment now and enjoy an unforgettable professional service",
+            "services.cta.btn": "Book Appointment",
+
+            "products.hero.badge": "— Products —",
+            "products.hero.title": "Our Products",
+            "products.hero.subtitle": "Premium products for hair and beard care",
+            "products.filter.all": "All",
+            "products.filter.hair": "Hair Care",
+            "products.filter.beard": "Beard Care",
+            "products.filter.styling": "Styling",
+            "products.empty": "No products available currently",
+            "products.modal.authentic": "100% Authentic",
+            "products.modal.quality": "High Quality",
+            "products.modal.available": "Available in Salon",
+            "products.modal.bookBtn": "Book & Get It",
+            "products.cta.title": "Want to try our products?",
+            "products.cta.desc": "Book now and get a free consultation from our experts",
+            "products.cta.btn": "Book Now",
+
+            "offers.hero.badge": "— Exclusive Offers —",
+            "offers.hero.title": "Offers",
+            "offers.hero.subtitle": "Special discounts for a limited time",
+            "offers.featured.badge": "Special Offer",
+            "offers.featured.title": "Luxury Groom Package",
+            "offers.featured.desc": "Get the full groom package with a special discount - Haircut + Styling + Beard Care + Face Mask",
+            "offers.countdown.days": "Day",
+            "offers.countdown.hours": "Hour",
+            "offers.countdown.minutes": "Min",
+            "offers.countdown.seconds": "Sec",
+            "offers.featured.discount": "Discount",
+            "offers.btn": "Book Now",
+            "offers.grid.badge": "— All Offers —",
+            "offers.grid.title": "Deals Not To Miss",
+            "offers.empty": "No offers available currently",
+            "offers.cta.title": "Don't miss the chance!",
+            "offers.cta.desc": "Offers are available for a limited time - book now",
+            "offers.cta.btn": "Book Now",
+
+            "about.title": "About Us",
+            "about.intro": "A premium grooming experience built on craft and care.",
+            "about.staffTitle": "Our Team",
+            "about.placeTitle": "Salon Photos",
+
+            "contact.title": "Visit or Contact Us",
+            "contact.addressLabel": "Address",
+            "contact.phoneLabel": "Phone",
+            "contact.hoursLabel": "Working Hours",
+            "contact.addressValue": "Main Street, Area",
+            "contact.phoneValue": "01000000000",
+            "contact.hoursValue": "Daily 10 AM - 10 PM",
+
+            "booking.hero.badge": "— Booking —",
+            "booking.hero.title": "Book Appointment",
+            "booking.hero.subtitle": "Choose service and time for a luxury experience",
+            "booking.step1": "Service",
+            "booking.step2": "Date",
+            "booking.step3": "Details",
+            "booking.form.serviceTitle": "Choose Service",
+            "booking.form.serviceDesc": "Select the service that suits you",
+            "booking.form.next": "Next",
+            "booking.form.prev": "Previous",
+            "booking.form.dateTitle": "Choose Date",
+            "booking.form.dateDesc": "Select date and time",
+            "booking.form.dateLabel": "Date",
+            "booking.form.timeLabel": "Time",
+            "booking.form.infoTitle": "Your Details",
+            "booking.form.infoDesc": "Enter your details to confirm",
+            "booking.form.nameLabel": "Full Name",
+            "booking.form.namePlaceholder": "Enter full name",
+            "booking.form.phoneLabel": "Phone Number",
+            "booking.form.phonePlaceholder": "01xxxxxxxxx",
+            "booking.form.notesLabel": "Notes (Optional)",
+            "booking.form.notesPlaceholder": "Any extra notes...",
+            "booking.form.summaryTitle": "Booking Summary",
+            "booking.form.summaryService": "Service",
+            "booking.form.summaryDate": "Date",
+            "booking.form.summaryTime": "Time",
+            "booking.form.summaryPrice": "Price",
+            "booking.form.confirmBtn": "Confirm Booking",
+            "booking.sidebar.location": "Location",
+            "booking.sidebar.contact": "Contact",
+            "booking.sidebar.hours": "Working Hours",
+            "booking.sidebar.tipTitle": "Tip",
+            "booking.sidebar.tipDesc": "Book at least a day in advance for best service",
+            "booking.success.title": "Booking Successful!",
+            "booking.success.desc": "We will contact you shortly to confirm.",
+            "booking.success.btn": "OK",
+            "booking.date.today": "Today",
+            "booking.date.tomorrow": "Tomorrow",
+
+            "footer.desc": "A premium modern barbershop offering integrated services with the latest techniques and best products.",
+            "footer.quickLinks": "Quick Links",
+            "footer.contact": "Contact Us",
+            "footer.rights": "© 2026 Ibraheem Mahsob. All rights reserved."
+        },
+        ar: {
+            "nav.home": "الرئيسية",
+            "nav.services": "الخدمات",
+            "nav.products": "المنتجات",
+            "nav.offers": "العروض",
+            "nav.booking": "احجز الآن",
+            "nav.about": "تعرف علينا",
+            "nav.contact": "تواصل معنا",
+
+            // Dynamic Content - Services
+            "service.1.name": "حلاقة كلاسيكية",
+            "service.1.desc": "قص شعر احترافي مع تصفيف مميز",
+            "service.2.name": "تهذيب اللحية",
+            "service.2.desc": "تشكيل وتهذيب اللحية باحترافية",
+            "service.3.name": "حلاقة ملكية",
+            "service.3.desc": "تجربة حلاقة VIP كاملة مع ماسك",
+            "service.4.name": "صبغة شعر",
+            "service.4.desc": "ألوان عصرية وصبغات طبيعية",
+            "service.5.name": "حلاقة أطفال",
+            "service.5.desc": "قص شعر للأطفال بعناية",
+            "service.6.name": "سبا للشعر",
+            "service.6.desc": "علاج وترطيب عميق للشعر",
+            "service.time": "30-45 دقيقة",
+            "service.book": "احجز",
+
+            // Dynamic Content - Products
+            "product.1.name": "شامبو بريميوم",
+            "product.1.desc": "شامبو للعناية اليومية بالشعر",
+            "product.2.name": "جل تصفيف",
+            "product.2.desc": "جل تثبيت قوي",
+            "product.3.name": "زيت لحية",
+            "product.3.desc": "زيت طبيعي للحية",
+            "product.4.name": "صبغة شعر",
+            "product.4.desc": "صبغة طبيعية للشعر",
+            "product.5.name": "بلسم اللحية",
+            "product.5.desc": "مرطب ومنعم للحية",
+            "product.6.name": "واكس للشعر",
+            "product.6.desc": "تثبيت ومظهر طبيعي",
+            "product.details": "التفاصيل",
+            "product.viewDetails": "عرض التفاصيل",
+
+            // Dynamic Content - Offers
+            "offer.1.title": "باقة العريس",
+            "offer.1.desc": "حلاقة + لحية + ماسك + سبا",
+            "offer.2.title": "خصم الطلاب",
+            "offer.2.desc": "خصم 20% على جميع الخدمات",
+            "offer.discount": "خصم",
+            "offer.special": "عرض خاص",
+            "offer.book": "احجز الآن",
+
+            "currency": "ج.م",
+
+            "home.hero.subtitle": "تجربة حلاقة فاخرة تليق بك",
+            "home.hero.bookVideo": "احجز موعدك",
+            "home.hero.services": "استكشف خدماتنا",
+            "home.hero.discover": "اكتشف المزيد",
+            "home.section.services": "خدماتنا",
+            "home.section.services.subtitle": "ما نقدمه لك",
+            "home.services.classic": "حلاقة كلاسيكية",
+            "home.services.classic.desc": "قص شعر احترافي مع تصفيف مميز",
+            "home.services.beard": "تهذيب اللحية",
+            "home.services.beard.desc": "تشكيل وتهذيب اللحية باحترافية",
+            "home.services.royal": "حلاقة ملكية",
+            "home.services.royal.desc": "تجربة حلاقة VIP كاملة مع ماسك",
+            "home.services.color": "صبغة شعر",
+            "home.services.color.desc": "ألوان عصرية وصبغات طبيعية",
+            "home.services.viewAll": "عرض كل الخدمات",
+            "home.section.gallery": "أعمالنا",
+            "home.section.gallery.title": "معرض الصور",
+            "home.section.about": "من نحن",
+            "home.section.about.title": "أكثر من مجرد صالون",
+            "home.about.text": "في Ibraheem Mahsob، نؤمن بأن الحلاقة فن وليست مجرد خدمة. نقدم لك تجربة فريدة تجمع بين الأناقة والراحة والاحترافية.",
+            "home.about.feature1": "خبراء محترفين",
+            "home.about.feature2": "منتجات عالمية",
+            "home.about.feature3": "بيئة راقية",
+            "home.about.feature4": "حجز سهل",
+            "home.staff.ibrahim": "إبراهيم محسوب",
+            "home.staff.b1": "حلاق 1",
+            "home.staff.b2": "حلاق 2",
+            "home.staff.b3": "حلاق 3",
+            "home.section.reviews": "آراء العملاء",
+            "home.section.reviews.title": "ماذا يقول عملاؤنا",
+            "home.section.offers": "عروض حصرية",
+            "home.section.offers.title": "عروض لا تفوتك",
+            "home.section.faq": "الأسئلة الشائعة",
+            "home.section.faq.title": "إجابات على تساؤلاتك",
+            "home.faq.q1": "هل يجب الحجز مسبقاً؟",
+            "home.faq.a1": "يُفضل الحجز المسبق لضمان الحصول على موعد مناسب، لكننا نستقبل العملاء بدون حجز حسب التوفر.",
+            "home.faq.q2": "ما هي طرق الدفع المتاحة؟",
+            "home.faq.a2": "نقبل الدفع نقداً وبالبطاقات الائتمانية وكذلك المحافظ الإلكترونية.",
+            "home.faq.q3": "هل تقدمون خدمات للأطفال؟",
+            "home.faq.a3": "نعم، نقدم خدمات قص الشعر للأطفال بأسعار مخفضة وبأجواء مريحة لهم.",
+            "home.faq.q4": "ما هي ساعات العمل؟",
+            "home.faq.a4": "نعمل يومياً من الساعة 10 صباحاً حتى 10 مساءً.",
+            "home.section.contact": "تواصل معنا",
+            "home.section.contact.title": "زورنا أو تواصل معنا",
+
+            "services.hero.badge": "PREMIUM SERVICES",
+            "services.hero.title": "خدماتنا",
+            "services.hero.subtitle": "تجربة حلاقة فاخرة لا تُنسى بأيدي محترفين",
+            "services.stat.years": "10+",
+            "services.stat.yearsLabel": "سنوات خبرة",
+            "services.intro.text": "نقدم لك مجموعة متكاملة من خدمات الحلاقة والعناية بالشعر واللحية، باستخدام أفضل الأدوات والمنتجات العالمية. كل خدمة مصممة لتمنحك تجربة استثنائية.",
+            "services.stat.clients": "5K+",
+            "services.stat.clientsLabel": "عميل سعيد",
+            "services.main.badge": "— خدماتنا الأساسية —",
+            "services.main.title": "اختر خدمتك",
+            "services.process.badge": "— كيف نعمل —",
+            "services.process.title": "خطوات بسيطة",
+            "services.process.step1.title": "احجز موعدك",
+            "services.process.step1.desc": "اختر الخدمة والوقت المناسب لك من خلال نظام الحجز السهل",
+            "services.process.step2.title": "استشارة مجانية",
+            "services.process.step2.desc": "نناقش معك أفضل الخيارات لتحصل على النتيجة المثالية",
+            "services.process.step3.title": "تجربة فاخرة",
+            "services.process.step3.desc": "استمتع بخدمة احترافية في أجواء راقية ومريحة",
+            "services.feature1.title": "أدوات احترافية",
+            "services.feature1.desc": "نستخدم أحدث الأدوات والمعدات من أفضل الماركات العالمية",
+            "services.feature2.title": "منتجات فاخرة",
+            "services.feature2.desc": "منتجات عناية أصلية ومستوردة لنتائج استثنائية",
+            "services.feature3.title": "التزام بالمواعيد",
+            "services.feature3.desc": "نحترم وقتك ونلتزم بالموعد المحدد دون تأخير",
+            "services.feature4.title": "ضمان الرضا",
+            "services.feature4.desc": "رضاك هو هدفنا الأول ونضمن لك تجربة مميزة",
+            "services.cta.title": "جاهز لتجربة مميزة؟",
+            "services.cta.desc": "احجز موعدك الآن واستمتع بخدمة احترافية لا تُنسى",
+            "services.cta.btn": "احجز موعدك",
+
+            "products.hero.badge": "— المنتجات —",
+            "products.hero.title": "منتجاتنا",
+            "products.hero.subtitle": "منتجات فاخرة للعناية بالشعر واللحية",
+            "products.filter.all": "الكل",
+            "products.filter.hair": "العناية بالشعر",
+            "products.filter.beard": "العناية باللحية",
+            "products.filter.styling": "التصفيف",
+            "products.empty": "لا توجد منتجات حالياً",
+            "products.modal.authentic": "منتج أصلي 100%",
+            "products.modal.quality": "جودة عالية",
+            "products.modal.available": "متوفر في الصالون",
+            "products.modal.bookBtn": "احجز واحصل عليه",
+            "products.cta.title": "هل تريد تجربة منتجاتنا؟",
+            "products.cta.desc": "احجز موعدك الآن واحصل على استشارة مجانية من خبرائنا",
+            "products.cta.btn": "احجز الآن",
+
+            "offers.hero.badge": "— عروض حصرية —",
+            "offers.hero.title": "العروض",
+            "offers.hero.subtitle": "خصومات مميزة لفترة محدودة",
+            "offers.featured.badge": "عرض مميز",
+            "offers.featured.title": "باقة العريس الفاخرة",
+            "offers.featured.desc": "احصل على الباقة الكاملة للعريس مع خصم خاص - حلاقة + تصفيف + عناية باللحية + ماسك للوجه",
+            "offers.countdown.days": "يوم",
+            "offers.countdown.hours": "ساعة",
+            "offers.countdown.minutes": "دقيقة",
+            "offers.countdown.seconds": "ثانية",
+            "offers.featured.discount": "خصم",
+            "offers.btn": "احجز الآن",
+            "offers.grid.badge": "— جميع العروض —",
+            "offers.grid.title": "عروض لا تفوتها",
+            "offers.empty": "لا توجد عروض حالياً",
+            "offers.cta.title": "لا تفوت الفرصة!",
+            "offers.cta.desc": "العروض متاحة لفترة محدودة - احجز الآن",
+            "offers.cta.btn": "احجز الآن",
+
+            "about.title": "تعرف علينا",
+            "about.intro": "تجربة عناية مميزة تعتمد على المهارة والاهتمام.",
+            "about.staffTitle": "فريق العمل",
+            "about.placeTitle": "صور المكان",
+
+            "contact.title": "زورنا أو تواصل معنا",
+            "contact.addressLabel": "العنوان",
+            "contact.phoneLabel": "الهاتف",
+            "contact.hoursLabel": "ساعات العمل",
+            "contact.addressValue": "شارع رئيسي، المنطقة",
+            "contact.phoneValue": "01000000000",
+            "contact.hoursValue": "يوميًا من 10 صباحًا - 10 مساءً",
+
+            "booking.hero.badge": "— الحجز —",
+            "booking.hero.title": "احجز موعدك",
+            "booking.hero.subtitle": "اختر الخدمة والموعد المناسب لتجربة فاخرة",
+            "booking.step1": "الخدمة",
+            "booking.step2": "الموعد",
+            "booking.step3": "البيانات",
+            "booking.form.serviceTitle": "اختر الخدمة",
+            "booking.form.serviceDesc": "اختر الخدمة التي تناسبك",
+            "booking.form.next": "التالي",
+            "booking.form.prev": "السابق",
+            "booking.form.dateTitle": "اختر الموعد",
+            "booking.form.dateDesc": "حدد التاريخ والوقت المناسب",
+            "booking.form.dateLabel": "التاريخ",
+            "booking.form.timeLabel": "الوقت",
+            "booking.form.infoTitle": "بياناتك",
+            "booking.form.infoDesc": "أدخل بياناتك للتأكيد",
+            "booking.form.nameLabel": "الاسم الكامل",
+            "booking.form.namePlaceholder": "أدخل اسمك الكامل",
+            "booking.form.phoneLabel": "رقم الهاتف",
+            "booking.form.phonePlaceholder": "01xxxxxxxxx",
+            "booking.form.notesLabel": "ملاحظات (اختياري)",
+            "booking.form.notesPlaceholder": "أي ملاحظات إضافية...",
+            "booking.form.summaryTitle": "ملخص الحجز",
+            "booking.form.summaryService": "الخدمة",
+            "booking.form.summaryDate": "التاريخ",
+            "booking.form.summaryTime": "الوقت",
+            "booking.form.summaryPrice": "السعر",
+            "booking.form.confirmBtn": "تأكيد الحجز",
+            "booking.sidebar.location": "الموقع",
+            "booking.sidebar.contact": "للتواصل",
+            "booking.sidebar.hours": "ساعات العمل",
+            "booking.sidebar.tipTitle": "نصيحة",
+            "booking.sidebar.tipDesc": "احجز قبل موعدك بيوم على الأقل للحصول على أفضل خدمة",
+            "booking.success.title": "تم الحجز بنجاح!",
+            "booking.success.desc": "سنتواصل معك قريباً لتأكيد موعدك",
+            "booking.success.btn": "حسناً",
+            "booking.date.today": "اليوم",
+            "booking.date.tomorrow": "غداً",
+
+            "footer.desc": "صالون حلاقة عصري يقدم خدمات متكاملة للرجل العصري بأحدث التقنيات وأفضل المنتجات.",
+            "footer.quickLinks": "روابط سريعة",
+            "footer.contact": "تواصل معنا",
+            "footer.rights": "© 2026 Ibraheem Mahsob. جميع الحقوق محفوظة"
+        }
+    };
+
+    const DEFAULT_LANG = "ar";
+
+    function applyLang(lang) {
+        const dict = translations[lang] || translations[DEFAULT_LANG];
+
+        document.documentElement.lang = (lang === "ar") ? "ar" : "en";
+        document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+        document.body.classList.toggle("rtl", lang === "ar");
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            const val = dict[key] || translations[DEFAULT_LANG][key];
+            if (val) el.textContent = val;
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            const val = dict[key] || translations[DEFAULT_LANG][key];
+            if (val) el.placeholder = val;
+        });
+
+        const label = document.getElementById("langLabel");
+        if (label) label.textContent = (lang === "ar") ? "EN" : "AR";
+
+        // Reload content if it's dynamic and the function exists
+        if (typeof window.reloadDynamicContent === 'function') {
+            window.reloadDynamicContent();
+        }
+    }
+
+    // Export translator function for dynamic content
+    window.t = function (key) {
+        const lang = getSavedLang();
+        const dict = translations[lang] || translations[DEFAULT_LANG];
+        return dict[key] || translations[DEFAULT_LANG][key] || key;
+    };
+
+    function getSavedLang() {
+        return localStorage.getItem("site_lang") || DEFAULT_LANG;
+    }
+
+    function setSavedLang(lang) {
+        localStorage.setItem("site_lang", lang);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const initialLang = getSavedLang();
+        applyLang(initialLang);
+
+        const toggleBtn = document.getElementById("langToggle");
+        if (toggleBtn) {
+            toggleBtn.addEventListener("click", () => {
+                const current = getSavedLang();
+                const next = (current === "ar") ? "en" : "ar";
+                setSavedLang(next);
+                applyLang(next);
+            });
+        }
+    });
+})();
