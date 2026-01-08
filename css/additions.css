@@ -242,3 +242,165 @@
     transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.20);
 }
+
+/* =========================================
+   DIRECTION 2 — PROFESSIONAL + DYNAMIC STAFF CARDS
+   Visual polish for Home staff cluster + About page staff grid
+   ========================================= */
+
+/* --- 1) Gradient overlay on images for depth & text readability --- */
+.staff-card::after,
+.staff-feature::after,
+.profile-card::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 280ms ease;
+}
+
+.profile-card::before {
+    height: 40%;
+}
+
+/* --- 2) Accent line above name (animates in on hover) --- */
+.staff-card__name::before,
+.profile-card__body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    inset-inline-start: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: transform 280ms ease;
+    transform-origin: center;
+}
+
+/* RTL fix for accent line */
+[dir="rtl"] .staff-card__name::before,
+[dir="rtl"] .profile-card__body::before {
+    transform: translateX(50%) scaleX(0);
+}
+
+.profile-card__body {
+    position: relative;
+}
+
+.profile-card__body::before {
+    top: 0;
+    inset-inline-start: 14px;
+    inset-inline-end: 14px;
+    width: auto;
+    transform: scaleX(0);
+}
+
+/* --- 3) Hover interactions (desktop only) --- */
+@media (hover: hover) and (pointer: fine) {
+
+    /* Card lift & shadow deepen */
+    .staff-card:hover,
+    .staff-feature:hover,
+    .profile-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.24);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Subtle image zoom */
+    .staff-card__img,
+    .profile-card img {
+        transition: transform 320ms ease;
+    }
+
+    .staff-card:hover .staff-card__img,
+    .staff-feature:hover .staff-card__img,
+    .profile-card:hover img {
+        transform: scale(1.04);
+    }
+
+    /* Accent line reveal on hover */
+    .staff-card:hover .staff-card__name::before,
+    .staff-feature:hover .staff-card__name::before {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    [dir="rtl"] .staff-card:hover .staff-card__name::before,
+    [dir="rtl"] .staff-feature:hover .staff-card__name::before {
+        transform: translateX(50%) scaleX(1);
+    }
+
+    .profile-card:hover .profile-card__body::before {
+        transform: scaleX(1);
+    }
+
+    /* Gradient intensifies slightly on hover */
+    .staff-card:hover::after,
+    .staff-feature:hover::after,
+    .profile-card:hover::before {
+        opacity: 0.85;
+    }
+
+    /* Description opacity increase on hover */
+    .profile-card:hover .profile-card__desc {
+        opacity: 1;
+    }
+}
+
+/* --- 4) Typography refinement --- */
+.staff-card__name {
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    z-index: 2;
+}
+
+.staff-feature .staff-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.profile-card__title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.profile-card__desc {
+    opacity: 0.65;
+    transition: opacity 280ms ease;
+}
+
+/* --- 5) Ensure image container clips zoom properly --- */
+.staff-card,
+.staff-feature,
+.profile-card {
+    overflow: hidden;
+}
+
+/* --- 6) Touch devices: disable hover transforms --- */
+@media (hover: none) {
+
+    .staff-card:hover,
+    .staff-feature:hover,
+    .profile-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .staff-card:hover .staff-card__img,
+    .staff-feature:hover .staff-card__img,
+    .profile-card:hover img {
+        transform: none;
+    }
+
+    .staff-card:hover .staff-card__name::before,
+    .staff-feature:hover .staff-card__name::before,
+    .profile-card:hover .profile-card__body::before {
+        transform: scaleX(0);
+    }
+}
